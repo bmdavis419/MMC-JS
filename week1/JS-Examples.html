@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<script>
+		// normal
+		function isPalNormal(num) {
+			if (num.length > 1) {
+				// remove first and last
+				let first = num.shift();
+				let last = num.pop();
+
+				// compare first/last and recursive call
+				let match = true;
+				if (first == last) {
+					match = true && isPal(num);
+				} else {
+					match = false;
+				}
+
+				// restore
+				num.unshift(first);
+				num.push(last);
+				return match;
+			} else {
+				return true;
+			}
+		}
+
+		// Special JS Syntax
+		const isPal = (num) => {
+			if (num.length > 1) {
+				// remove first and last
+				let first = num.shift();
+				let last = num.pop();
+
+				// compare first/last and recursive call
+				let match = true;
+				if (first == last) {
+					match = true && isPal(num);
+				} else {
+					match = false;
+				}
+
+				// restore
+				num.unshift(first);
+				num.push(last);
+				return match;
+			} else {
+				return true;
+			}
+		};
+		let num = [1, 2, 3, 2, 1];
+		console.log(num);
+		console.log(isPal(num));
+		console.log(num);
+	</script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Week 1</title>
+	</head>
+	<body>
+		Body
+	</body>
+</html>
