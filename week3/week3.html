@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script>
+			const calcTax = (amt) => {
+				let tax = amt * 0.2;
+				return amt + tax;
+			};
+
+			let strEx = "hello";
+
+			let firstName = "Ben";
+			let lastName = "Davis";
+			let age = 19;
+
+			let ex1 = {
+				firstName: "Ben",
+				lastName: "Davis",
+				age: 19,
+			};
+
+			let people = [
+				ex1,
+				{
+					firstName: "John",
+					lastName: "Doe",
+					age: 30,
+				},
+			];
+
+			people.forEach((person) => {
+				console.log(
+					`${person.firstName} ${person.lastName} is ${person.age} years old`
+				);
+			});
+		</script>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		Week 3
+	</body>
+</html>
